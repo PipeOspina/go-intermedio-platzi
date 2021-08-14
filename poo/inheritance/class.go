@@ -18,6 +18,10 @@ type FullTimeEmployee struct {
 	hours int
 }
 
+func GetMessage(p Person) {
+	fmt.Printf("%s with age %d\n", p.name, p.age)
+}
+
 func main() {
 	ftEmployee := FullTimeEmployee{}
 	ftEmployee.name = "Pipe"
@@ -40,4 +44,6 @@ func main() {
 		age:  20,
 	}
 	fmt.Printf("%v\n", ftEmployee)
+
+	GetMessage(ftEmployee.Person)
 }
