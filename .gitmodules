@@ -1,0 +1,3 @@
+[submodule "go-mod-test"]
+	path = modules
+	url = git@github.com:PipeOspina/go-mod-test.git
