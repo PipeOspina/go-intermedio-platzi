@@ -1,0 +1,8 @@
+Para ver el coverage de tests en consola, basta con
+go test -cover
+
+Para sacarlo en un archivo
+go test -coverprofile=coverage.out
+
+Para generar una página con la info
+go tool cover -html=coverage.out
