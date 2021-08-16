@@ -2,7 +2,27 @@ Para ver el coverage de tests en consola, basta con
 go test -cover
 
 Para sacarlo en un archivo
-go test -coverprofile=coverage.out
+go test -coverprofile=coverage.out //nombre.out
 
 Para generar una página con la info
 go tool cover -html=coverage.out
+
+
+Para el uso de CPU
+go test -cpuprofile=cpu.out //nombre.out
+
+Para evaluar el reporte
+go tool pprof cpu.out
+
+Dentro del pprof, podemos escribir:
+    - top
+    Muestra el uso de CPU por dependencia
+
+    - list Fibonacci
+    En este caso para ver la funcion de Fibonacci
+
+    - web
+    Genera un archivo "dot" para ver una grafica del tiempo de ejecución de las instrucciones // es necesario tener instalado Graphviz y el bin "dot" en el $PATH
+
+    - pdf
+    Genera un reporte en PDF de los tiempos // también es necesaria la dependencia de "web"
